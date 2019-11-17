@@ -10,7 +10,7 @@ Run instructions:
    Please provide the absolute path to csv file as parameter in the DataLoader.init method which is being called in the setUp method.
 
 This project comprises of two main classes:
-1. DataLoader: It reads the CSV and organize the data into the efficient format so that it can calculate the reports in optimized manner.
+1. DataLayer: It reads the CSV and organize the data into the efficient format so that it can calculate the reports in optimized manner.
 2. TransactionService: This takes the input and fetch the data from DataLoader class and performs the required operation.
 
 Following is the assumptions with data loading in the system:

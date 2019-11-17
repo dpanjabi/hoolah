@@ -56,6 +56,9 @@ public class DataLayer {
 
         if (transaction.getTransactionType() == TransactionType.REVERSAL) {
             Transaction originalTransaction = idMap.get(transaction.getRelatedTransactionId());
+            if(Objects.isNull(originalTransaction)) {
+                throw new DataLoadingException(String.format("Error: Received a REVERSAL transaction '%s' for which PAYMENT transaction '%s' not received in the past.", transaction.getId(), transaction.getRelatedTransactionId()));
+            }
             originalTransaction.setReversed(true);
         }
 
