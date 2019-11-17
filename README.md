@@ -1,4 +1,4 @@
-# hoolah
+# Transaction Reporting System
 
 This system reports the total number of transactions and the average transaction value for a specific merchant in provided date range.
 Additionally, if a transaction record has a REVERSAL transaction, then it does not include in the computed statistics, even if the reversing transaction is outside of the requested date range.
