@@ -35,9 +35,8 @@ public class TransactionService {
                 .sum();
 
         int transactionCount = transactionCounts.intValue();
-        transactionCount = transactionCount == 0? 1: transactionCount;
         double transactionAverage = trnsactionSum /  transactionCount;
 
-        return new TransactionAnalyzerReport(transactionAverage, transactionCounts.intValue());
+        return new TransactionAnalyzerReport(Double.isNaN(transactionAverage)? 0d: transactionAverage, transactionCount);
     }
 }
